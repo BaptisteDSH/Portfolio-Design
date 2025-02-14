@@ -1,0 +1,192 @@
+.unlock-regular {
+  font-family: "Unlock", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box; /* Évite les dépassements de largeur */
+  margin: 0;
+  padding: 0;
+  font-family: Roboto;
+}
+
+html,
+body {
+  overflow-x: hidden; /* Empêche le scroll horizontal */
+  width: 100vw; /* Assure que rien ne dépasse */
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul:hover {
+  color: #666ae1;
+}
+
+nav {
+  background-color: #ffffff;
+  height: 10vh; /* Hauteur de la navbar */
+  width: 100vw; /* Largeur pleine */
+  display: flex;
+  align-items: center; /* Centre verticalement */
+  justify-content: space-between; /* Espacement entre les éléments */
+  padding: 0 5vw; /* Ajoute du padding à gauche et à droite */
+  position: fixed; /* Fixe la navbar en haut */
+  top: 0;
+  left: 0;
+}
+
+nav h1 {
+  color: #000473;
+  font-size: 25px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 3vw; /* Espacement entre les liens */
+  color: #000473;
+  font-weight: 300;
+  font-size: 18px;
+}
+
+.active {
+  color: #000473;
+  text-decoration: underline;
+}
+
+nav ul li {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+}
+
+.home-page,
+.my-cv-page {
+  width: 100vw; /* Largeur pleine */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Centre le contenu */
+  color: white;
+  text-align: center;
+  padding: 100px 0px;
+  gap: 0;
+  margin: 0px 0px 40px 0px;
+}
+
+.home-page h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.home-page p {
+  font-size: 1.5rem;
+  max-width: 60%;
+  line-height: 1.6;
+}
+
+.nav-menu-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.projects-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap; /* Permet aux éléments de passer à la ligne suivante */
+  gap: 0;
+}
+
+.projects-container > div {
+  flex-basis: calc(
+    25% - 20px
+  ); /* Prend 25% de la largeur (4 éléments par ligne) */
+  box-sizing: border-box; /* Pour inclure le padding et les marges dans la largeur */
+  gap: 0;
+}
+
+.projects-container img {
+  height: 250px;
+}
+
+.footer {
+  height: 10vh; /* Hauteur du footer */
+  width: 100vw; /* Largeur pleine */
+  background-color: #000473cf;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centre le texte */
+  position: absolute;
+  bottom: 0; /* Colle le footer en bas */
+  left: 0;
+  font-size: 1.2rem;
+}
+
+.contact-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 150px;
+}
+
+.contact-page {
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+  border-radius: 8px;
+}
+
+.contact-page h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form label {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  margin: 5px 0 15px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.contact-form button {
+  padding: 10px;
+  border: none;
+  background-color: #000473;
+  color: white;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #666ae1;
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 150px;
+}
