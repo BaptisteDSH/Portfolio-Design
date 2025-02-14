@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const HomePage = () => {
   return (
     <div className="home-page">
@@ -42,10 +44,14 @@ const HomePage = () => {
           <img src="assets/Plan de travail 2 copie 14@4x-100.jpg" />
         </div>
         <div>
-          <img src="assets/Plan de travail 2 copie@4x-100.jpg" />
+          <Link to="/Conversation">
+            <img src="assets/Plan de travail 2 copie@4x-100.jpg" />
+          </Link>
         </div>
         <div>
-          <img src="assets/Plan de travail 2@4x-100.jpg" />
+          <Link to="/Chanel">
+            <img src="assets/Plan de travail 2@4x-100.jpg" />
+          </Link>
         </div>
         <div>
           <img src="assets/Plan de travail 2 copie 13@4x-100.jpg" />

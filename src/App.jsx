@@ -4,6 +4,8 @@ import AnimatedCursor from "react-animated-cursor";
 import { Route, Routes } from "react-router-dom";
 import MyCvPage from "./pages/MyCvPage";
 import ContactPage from "./pages/ContactPage";
+import ChanelDetailPage from "./pages/ChanelDetailPage";
+import ConversationDetailPage from "./pages/ConversationDetailPage";
 
 function App() {
   return (
@@ -13,8 +15,10 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/CV" element={<MyCvPage />} />
         <Route path="/Contact" element={<ContactPage />} />
+        <Route path="/Chanel" element={<ChanelDetailPage />} />
+        <Route path="/Conversation" element={<ConversationDetailPage />} />
       </Routes>
-      {/* <Footer /> */}
+
       <AnimatedCursor
         innerSize={12} // Réduire la taille du point interne
         outerSize={24} // Réduire la taille de l'anneau externe

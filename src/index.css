@@ -124,7 +124,6 @@ nav ul li {
   display: flex;
   align-items: center;
   justify-content: center; /* Centre le texte */
-  position: absolute;
   bottom: 0; /* Colle le footer en bas */
   left: 0;
   font-size: 1.2rem;
@@ -273,6 +272,82 @@ nav h1 {
   to {
     transform: translateY(100%);
     opacity: 0;
+  }
+}
+
+/* Conteneur des informations du projet */
+
+.infos-projet-container {
+  background-color: #ffffff;
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: 100px auto;
+  /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px; */
+  display: flex;
+  flex-direction: column; /* Empêche le texte d'être centré */
+  align-items: flex-start; /* Aligne le texte au début */
+}
+
+.infos-projet-container h2 {
+  font-size: 2.5rem;
+  color: #000473;
+  margin-bottom: 10px;
+}
+
+.infos-projet-container h4 {
+  font-size: 1.5rem;
+  color: #888;
+  margin-bottom: 20px;
+}
+
+.infos-projet-container p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 30px;
+  max-width: 800px;
+  text-align: left;
+  margin: 0;
+}
+
+/* Conteneur des images */
+.image-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  justify-items: center;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .infos-projet-container {
+    padding: 20px;
+    margin-top: 100px;
+  }
+
+  .infos-projet-container h2 {
+    font-size: 2rem;
+  }
+
+  .infos-projet-container h4 {
+    font-size: 1.3rem;
+  }
+
+  .infos-projet-container p {
+    font-size: 0.95rem;
+  }
+
+  .image-container {
+    grid-template-columns: 1fr; /* Une seule colonne sur mobile */
   }
 }
 

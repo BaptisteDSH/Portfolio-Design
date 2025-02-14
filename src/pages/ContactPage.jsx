@@ -22,10 +22,10 @@ const ContactPage = () => {
     // Envoi du formulaire via EmailJS
     emailjs
       .sendForm(
-        "service_yourServiceID", // Remplacez par votre Service ID
-        "template_yourTemplateID", // Remplacez par votre Template ID
+        "service_35d7nnr", // Remplacez par votre Service ID
+        "template_4j84roi", // Remplacez par votre Template ID
         e.target,
-        "user_yourUserID" // Remplacez par votre User ID
+        "73tjzkOUnoczIXWVU" // Remplacez par votre User ID
       )
       .then(
         (result) => {
