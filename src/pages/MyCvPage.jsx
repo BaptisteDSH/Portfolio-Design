@@ -5,11 +5,7 @@ const MyCvPage = () => {
         href="https://drive.google.com/file/d/1zlR7Jqv11GVcqtTjrRnrRRTmToNMeWr0/view?usp=drive_link"
         target="_blank"
       >
-        <img
-          src="src/assets/CV+ombre.jpg"
-          alt="cv"
-          style={{ height: "600px" }}
-        />
+        <img src="assets/CV+ombre.jpg" alt="cv" style={{ height: "600px" }} />
       </a>
     </div>
   );
