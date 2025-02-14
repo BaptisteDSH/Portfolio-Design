@@ -8,6 +8,12 @@ const HomePage = () => {
           <img src="assets/Plan de travail 1@4x-100.jpg" />
         </div>
         <div>
+          <Link to="/Chanel">
+            <img src="assets/Plan de travail 2@4x-100.jpg" />
+          </Link>
+        </div>
+
+        <div>
           <img src="assets/Plan de travail 2 copie 2@4x-100.jpg" />
         </div>
         <div>
@@ -48,11 +54,7 @@ const HomePage = () => {
             <img src="assets/Plan de travail 2 copie@4x-100.jpg" />
           </Link>
         </div>
-        <div>
-          <Link to="/Chanel">
-            <img src="assets/Plan de travail 2@4x-100.jpg" />
-          </Link>
-        </div>
+
         <div>
           <img src="assets/Plan de travail 2 copie 13@4x-100.jpg" />
         </div>

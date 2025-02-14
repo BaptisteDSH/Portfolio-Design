@@ -1,5 +1,3 @@
-import Footer from "../components/Footer";
-
 const ChanelDetailPage = () => {
   return (
     <div className="detail-page-container">
@@ -25,7 +23,6 @@ const ChanelDetailPage = () => {
         <img src="assets/Portfolio-site7.jpg" />
         <img src="assets/Portfolio-site8.jpg" />
       </div>
-      <Footer />
     </div>
   );
 };
