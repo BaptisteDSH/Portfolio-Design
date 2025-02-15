@@ -1,13 +1,33 @@
 import HomePage from "./components/HomePage";
 import Navbar from "./components/Navbar";
 import AnimatedCursor from "react-animated-cursor";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
+import { useEffect, useState } from "react";
 import MyCvPage from "./pages/MyCvPage";
 import ContactPage from "./pages/ContactPage";
 import ChanelDetailPage from "./pages/ChanelDetailPage";
 import ConversationDetailPage from "./pages/ConversationDetailPage";
 
 function App() {
+  const [isMobile, setIsMobile] = useState(false);
+  const location = useLocation();
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  useEffect(() => {
+    document.querySelectorAll("button.active").forEach((btn) => {
+      btn.classList.remove("active");
+    });
+  }, [location]);
+
   return (
     <>
       <Navbar />
@@ -19,38 +39,40 @@ function App() {
         <Route path="/Conversation" element={<ConversationDetailPage />} />
       </Routes>
 
-      <AnimatedCursor
-        innerSize={12} // Réduire la taille du point interne
-        outerSize={24} // Réduire la taille de l'anneau externe
-        color="0, 4, 115"
-        outerAlpha={0.2}
-        innerScale={0.7}
-        outerScale={5}
-        clickables={[
-          "a",
-          'input[type="text"]',
-          'input[type="email"]',
-          'input[type="number"]',
-          'input[type="submit"]',
-          'input[type="image"]',
-          "label[for]",
-          "select",
-          "textarea",
-          "button",
-          ".link",
-          {
-            target: ".custom",
-            options: {
-              innerSize: 18, // Taille du point personnalisé
-              outerSize: 36, // Taille de l'anneau personnalisé
-              color: "0, 4, 115",
-              outerAlpha: 0.3,
-              innerScale: 0.7,
-              outerScale: 5,
+      {!isMobile && (
+        <AnimatedCursor
+          innerSize={12}
+          outerSize={24}
+          color="0, 4, 115"
+          outerAlpha={0.2}
+          innerScale={0.7}
+          outerScale={5}
+          clickables={[
+            "a",
+            'input[type="text"]',
+            'input[type="email"]',
+            'input[type="number"]',
+            'input[type="submit"]',
+            'input[type="image"]',
+            "label[for]",
+            "select",
+            "textarea",
+            "button",
+            ".link",
+            {
+              target: ".custom",
+              options: {
+                innerSize: 18,
+                outerSize: 36,
+                color: "0, 4, 115",
+                outerAlpha: 0.3,
+                innerScale: 0.7,
+                outerScale: 5,
+              },
             },
-          },
-        ]}
-      />
+          ]}
+        />
+      )}
     </>
   );
 }
