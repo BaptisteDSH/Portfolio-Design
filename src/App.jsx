@@ -11,6 +11,7 @@ import ConversationDetailPage from "./pages/ConversationDetailPage";
 function App() {
   const [isMobile, setIsMobile] = useState(false);
   const location = useLocation();
+  const [darkTheme, setDarkTheme] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
@@ -29,8 +30,8 @@ function App() {
   }, [location]);
 
   return (
-    <>
-      <Navbar />
+    <main className={darkTheme ? "dark" : ""}>
+      <Navbar darkTheme={darkTheme} setDarkTheme={setDarkTheme} />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/CV" element={<MyCvPage />} />
@@ -43,7 +44,7 @@ function App() {
         <AnimatedCursor
           innerSize={12}
           outerSize={24}
-          color="0, 4, 115"
+          color="0, 0, 0"
           outerAlpha={0.2}
           innerScale={0.7}
           outerScale={5}
@@ -73,7 +74,7 @@ function App() {
           ]}
         />
       )}
-    </>
+    </main>
   );
 }
 

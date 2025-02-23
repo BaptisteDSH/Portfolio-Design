@@ -224,7 +224,7 @@ nav h1 {
 .nav-link {
   color: #000473;
   text-decoration: none;
-  font-weight: 300;
+  font-weight: 500;
   font-size: 18px;
 }
 
@@ -249,6 +249,21 @@ nav h1 {
   width: 25px;
   height: 3px;
   background-color: #000473;
+  color: #000473;
+}
+
+@media (max-width: 768px) {
+  .dark .nav-links {
+    background-color: #000473; /* Fond sombre */
+  }
+
+  .dark .nav-link {
+    color: white; /* Texte en blanc */
+  }
+
+  .dark .burger-line {
+    background-color: white; /* Icône burger en blanc */
+  }
 }
 
 /* Mobile Styles */
@@ -348,6 +363,102 @@ nav h1 {
 
   .image-container {
     grid-template-columns: 1fr; /* Une seule colonne sur mobile */
+  }
+
+  .active {
+    color: #000473;
+    text-decoration: none;
+  }
+  .contact-container {
+    padding: 30px; /* Moins de padding sur mobile */
+  }
+
+  .contact-page {
+    margin-top: 100px;
+    padding: 15px; /* Moins de padding sur mobile */
+    width: 100%; /* Occupe toute la largeur de l'écran */
+    max-width: 100%; /* S'assurer qu'il n'y a pas de largeur limitée */
+  }
+
+  .contact-page h1 {
+    font-size: 1.5rem; /* Taille plus petite du titre sur mobile */
+  }
+
+  .contact-form label {
+    font-size: 1rem; /* Taille des labels ajustée */
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 0.9rem; /* Taille plus petite des champs sur mobile */
+  }
+
+  .contact-form button {
+    font-size: 0.9rem; /* Taille plus petite du bouton */
+    padding: 8px; /* Moins de padding sur mobile */
+  }
+}
+
+/* Style de base du bouton */
+.theme-toggle-button {
+  padding: 12px 25px;
+  border: none;
+  background-color: #ffffff; /* Couleur du fond */
+  color: #000473;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 25px; /* Coins arrondis */
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombre légère pour un effet de profondeur */
+}
+
+/* Effet au survol */
+.theme-toggle-button:hover {
+  background-color: #666ae1; /* Couleur plus claire au survol */
+  transform: translateY(-3px); /* Légère élévation du bouton */
+}
+
+/* Effet au clic */
+.theme-toggle-button:active {
+  transform: translateY(2px); /* Enfoncer légèrement le bouton au clic */
+}
+
+/* Bouton pour le mode sombre */
+.theme-toggle-button.dark {
+  background-color: #f0f0f0; /* Fond pour le mode sombre */
+  color: #000473;
+}
+
+.theme-toggle-button.light {
+  background-color: #f0f0f0; /* Fond pour le mode clair */
+  color: #000473;
+  border: 1px solid #ccc;
+}
+
+/* Animation pour l'élément textuel */
+.theme-toggle-button span {
+  display: inline-block;
+  transition: opacity 0.2s ease;
+}
+
+/* Si le mode sombre est actif */
+.theme-toggle-button.dark span {
+  opacity: 0.8;
+}
+
+/* Si le mode clair est actif */
+.theme-toggle-button.light span {
+  opacity: 1;
+}
+
+.dark {
+  background-color: #000473;
+  nav h1 {
+    color: white;
+  }
+  a {
+    color: white;
   }
 }
 
